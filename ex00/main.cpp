@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 14:17:07 by dolifero          #+#    #+#             */
-/*   Updated: 2024/09/27 16:42:49 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/09/27 17:05:20 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,10 @@ int main()
 	wi->makeSound();
 	meta->makeSound(); //trying to call a virtual function from a non-instantiated class
 	wrongMeta->makeSound(); //trying to call a virtual function from a non-instantiated class
-	return 0;
+	delete meta;
+	delete j;
+	delete i;
+	delete wrongMeta;
+	delete wi;
+	return (0);
 }
