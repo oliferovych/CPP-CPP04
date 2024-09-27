@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 14:16:52 by dolifero          #+#    #+#             */
-/*   Updated: 2024/09/23 14:32:48 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/09/27 16:04:14 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,11 @@ Animal &Animal::operator=(const Animal &other)
 
 Animal::~Animal()
 {
+}
+
+void Animal::makeSound() const
+{
+	std::cout << "It should be overriden by derived classes. And make a specific sound." << std::endl;
 }
 
 void Animal::setType(std::string type)
