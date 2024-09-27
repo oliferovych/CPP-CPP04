@@ -6,7 +6,7 @@
 #    By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/19 20:47:08 by dolifero          #+#    #+#              #
-#    Updated: 2024/09/23 15:01:59 by dolifero         ###   ########.fr        #
+#    Updated: 2024/09/27 16:44:06 by dolifero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CC			= c++
 CFLAGS		= -Wall -Wextra -Werror -std=c++98
 RM			= rm -f
 
-SRC_FILES	= Animal.cpp Cat.cpp Dog.cpp main.cpp
+SRC_FILES	= Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp main.cpp
 OBJ_FILES	= $(SRC_FILES:.cpp=.o)
 
 all:		$(NAME)

@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 16:11:15 by dolifero          #+#    #+#             */
-/*   Updated: 2024/09/27 16:14:44 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/09/27 16:41:29 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ class WrongAnimal
 		~WrongAnimal();
 		void makeSound() const;
 		std::string getType() const;
-}
+};
 
 #endif
