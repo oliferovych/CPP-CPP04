@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 13:13:01 by dolifero          #+#    #+#             */
-/*   Updated: 2024/10/06 14:09:47 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/10/06 14:31:23 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,12 @@ Character::Character(const Character &other)
 	{
 		name = other.name;
 		for(int i = 0; i < 4; i++)
-			inventory[i] = other.inventory[i];
+		{
+			if(other.inventory[i])
+				inventory[i] = other.inventory[i]->clone();
+			else
+				inventory[i] = NULL;
+		}
 	}
 }
 
@@ -38,7 +43,10 @@ Character	&Character::operator=(const Character &other)
 		{
 			if(inventory[i])
 				delete inventory[i];
-			inventory[i] = other.inventory[i];
+			if(other.inventory[i])
+				inventory[i] = other.inventory[i]->clone();
+			else
+				inventory[i] = NULL;
 		}
 	}
 	return (*this);

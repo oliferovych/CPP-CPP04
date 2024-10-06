@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 12:53:16 by dolifero          #+#    #+#             */
-/*   Updated: 2024/10/06 13:35:16 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/10/06 14:36:06 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 AMateria::AMateria(std::string const &type) : type(type)
 {
+	std::cout << "AMateria " << type << " is created" << std::endl;
 }
 
 AMateria::~AMateria()
 {
+	std::cout << "AMateria " << type << " vanished" << std::endl;
 }
 
 AMateria::AMateria(const AMateria &other)

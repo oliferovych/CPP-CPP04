@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 13:40:50 by dolifero          #+#    #+#             */
-/*   Updated: 2024/10/06 14:02:06 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/10/06 14:32:42 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,12 @@ MateriaSource::MateriaSource(MateriaSource const &src)
 	if(this != &src)
 	{
 		for(int i = 0; i < 4; i++)
-			inventory[i] = src.inventory[i];
+		{
+			if(src.inventory[i])
+				inventory[i] = src.inventory[i]->clone();
+			else
+				inventory[i] = NULL;
+		}
 	}
 }
 
@@ -35,7 +40,10 @@ MateriaSource	&MateriaSource::operator=(MateriaSource const &src)
 		{
 			if(inventory[i])
 				delete inventory[i];
-			inventory[i] = src.inventory[i];
+			if(src.inventory[i])
+				inventory[i] = src.inventory[i]->clone();
+			else
+				inventory[i] = NULL;
 		}
 	}
 	return (*this);
